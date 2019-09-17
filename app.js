@@ -30,9 +30,11 @@ app.post('/', (req, res) => {
 });
 
 app.get('/todolist', (req, res) => {
+    if(nameList.length!==0)
     res.render('todolist', { name: nameList, toDo: todolist });
+    else
+    res.status(401);
 });
-
 
 
 app.listen(5500, () => {
