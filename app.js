@@ -14,6 +14,12 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/todolist',(req,res)=>{
+
+    res.render('')
+});
+
+
 app.listen(5500, () => {
     console.log("if you see the message, everything goes well!!!");
 });
