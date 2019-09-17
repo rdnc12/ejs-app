@@ -1,5 +1,5 @@
 <%- include('header'); -%>
-    <form class="form-signin">
+    <form class="form-signin" action="/" method="POST">
       <div class="text-center mb-4">
        <img class="mb-4" src="/img/to-do-list.jpg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">ToDo-List User Panel</h1>
@@ -9,6 +9,7 @@
         <input
           type="text"
           id="inputEmail"
+          name="inputEmail"
           class="form-control"
           placeholder="Username"
           required
@@ -21,6 +22,7 @@
         <input
           type="password"
           id="inputPassword"
+          name="inputPassword"
           class="form-control"
           placeholder="Password"
           required
@@ -34,7 +36,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
-        Sign in
+        <%= button1%>
       </button>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
     </form>
