@@ -9,27 +9,27 @@
       crossorigin="anonymous"
     />
     <link href="/css/todoListStyles.css" rel="stylesheet" />
-    <title>TodoList</title>
+    <title><%=name%>'s TodoList</title>
   </head>
   <body>
     <div id="wrapper" class="shadow-lg p-3 mb-5 bg-white rounded">
       <div id="topic-list">
-        <h2 class="title">Topics to Cover</h2>
+        <h2 class="title"><%=name%>'s TodoList</h2>
         <ul class="list-group" id="lessonList">
           <li class="list-group-item list-group-item-info">
-            <span class="name">JavaScript Essentials 1</span>
+            <span class="name"><%=toDo[0]%></span>
             <span class="delete">delete</span>
           </li>
           <li class="list-group-item list-group-item-light">
-            <span class="name">JavaScript Essentials 2</span>
+            <span class="name"><%=toDo[1]%></span>
             <span class="delete">delete</span>
           </li>
           <li class="list-group-item list-group-item-info">
-            <span class="name">jQuery Essentials</span>
+            <span class="name"><%=toDo[2]%></span>
             <span class="delete">delete</span>
           </li>
           <li class="list-group-item list-group-item-light">
-            <span class="name">React Essentials</span>
+            <span class="name"><%=toDo[3]%></span>
             <span class="delete">delete</span>
           </li>
         </ul>
@@ -41,6 +41,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+    
     <script src="/js/app.js"></script>
   </body>
 </html>
