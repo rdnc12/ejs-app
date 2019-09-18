@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 
 app.get('/', (req, res) => {
-    res.render('index', { button1: 'Login' });
+    res.render('index', { button1: 'Login', isError: false });
 });
 
 app.post('/', (req, res) => {
@@ -27,7 +27,7 @@ app.post('/', (req, res) => {
     if (userName === 'admin' && password === 'admin')
         res.redirect('/todolist');
     else
-        res.redirect('/');
+        res.render('index', { button1: 'Login',isError: true });
 });
 
 app.get('/todolist', (req, res) => {
