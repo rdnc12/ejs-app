@@ -34,7 +34,7 @@ app.get('/todolist', (req, res) => {
     if(nameList.length!==0)
     res.render('todolist', { name: nameList, toDo: todolist });
     else
-    res.status(401);
+        res.status(401).send('401 Unauthorized');
 });
 
 
