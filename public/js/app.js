@@ -17,18 +17,11 @@ $('button').on('click', function (e) {
 
     if (newValue !== '') {
 
-        if ($('.list-group li:last-child').hasClass('list-group-item-info')) {
-
             $('ul').append("<li class='list-group-item list-group-item-light'><span class='name'>"
                 + newValue
                 + "</span><span class='delete'>delete</span>");
             $('#addListItem').val('');
-        } else {
-            $('ul').append("<li class='list-group-item list-group-item-info'><span class='name'>"
-                + newValue
-                + "</span><span class='delete'>delete</span>");
-            $('#addListItem').val('');
-        }
+
     }
     else {
         $('button').css('background-color', 'red');
