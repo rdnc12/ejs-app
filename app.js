@@ -10,7 +10,7 @@ var todolist = [
     { id: 2, text: 'Ogle' },
     { id: 3, text: 'Ikindi' },
     { id: 4, text: 'Aksam' }];
-    
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -40,6 +40,11 @@ app.get('/todolist', (req, res) => {
         res.render('todolist', { name: nameList, toDo: todolist });
     else
         res.status(401).send('401 Unauthorized');
+});
+app.post('/deletetodo', (req, res) => {
+    let { id } = req.body;
+    todolist = todolist.filter(todo => todo.id != id);
+    res.redirect('/todolist');
 });
 
 

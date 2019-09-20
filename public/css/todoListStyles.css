@@ -28,43 +28,6 @@ h2 {
   margin: 30px;
 }
 
-#topic-list ul,
-#tabbed-content ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#topic-list li {
-  border-left: 5px solid #ddd;
-}
-
-#topic-list li:hover {
-  border-color: #9361bf;
-}
-
-.delete {
-  float: right;
-  background: #9361bf;
-  padding: 6px;
-  border-radius: 4px;
-  cursor: pointer;
-  color: white;
-  background-image: url(https://img.icons8.com/color/48/000000/delete-forever.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  padding-left: 45px;
- 
-}
-
-.delete:hover {
-  background: #333;
-  background-image: url(https://img.icons8.com/color/48/000000/delete-forever.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  padding-left: 45px;
-  
-}
-
 #add-topic {
   width: 400px;
   margin: 0 auto;
