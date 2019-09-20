@@ -18,7 +18,8 @@
         <ul class="list-group" id="lessonList">
           <% for(let i = 0; i< toDo.length; i++){ %>
             <li class="list-group-item list-group-item-info">
-            <span class="name"><%=toDo[i]%></span>
+            <span name="id"><%=toDo[i].id%></span>
+            <span class="name"><%=toDo[i].text%></span>
             <span class="delete">delete</span>
           </li>
            <% } %>

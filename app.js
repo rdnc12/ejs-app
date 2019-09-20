@@ -5,7 +5,12 @@ const bodyParser = require("body-parser");
 
 
 var nameList = [];
-var todolist = ['Sabah', 'Ogle', 'Ikindi', 'Aksam'];
+var todolist = [
+    { id: 1, text: 'Sabah' },
+    { id: 2, text: 'Ogle' },
+    { id: 3, text: 'Ikindi' },
+    { id: 4, text: 'Aksam' }];
+    
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -27,12 +32,12 @@ app.post('/', (req, res) => {
     if (userName === 'admin' && password === 'admin')
         res.redirect('/todolist');
     else
-        res.render('index', { button1: 'Login',isError: true });
+        res.render('index', { button1: 'Login', isError: true });
 });
 
 app.get('/todolist', (req, res) => {
-    if(nameList.length!==0)
-    res.render('todolist', { name: nameList, toDo: todolist });
+    if (nameList.length !== 0)
+        res.render('todolist', { name: nameList, toDo: todolist });
     else
         res.status(401).send('401 Unauthorized');
 });
