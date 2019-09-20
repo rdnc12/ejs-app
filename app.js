@@ -47,6 +47,14 @@ app.post('/deletetodo', (req, res) => {
     res.redirect('/todolist');
 });
 
+app.post('/addtodo', (req, res) => {
+
+    let { newTodo } = req.body;
+
+    todolist.push({ id:Date.now(), text: newTodo })
+    res.redirect('/todolist');
+});
+
 
 app.listen(5500, () => {
     console.log("if you see the message, everything goes well!!!");
